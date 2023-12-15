@@ -1,0 +1,2162 @@
+{
+	"info": {
+		"_postman_id": "53324330-d1c9-4fd9-9d0e-82ab8aef8dd1",
+		"name": "Restaurant",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "25877726"
+	},
+	"item": [
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/login?email=abdo2432dd551@gmail.com&password=123456789",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"login"
+							],
+							"query": [
+								{
+									"key": "email",
+									"value": "abdo2432dd551@gmail.com"
+								},
+								{
+									"key": "password",
+									"value": "123456789"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/register?name=Mohamed&email=mohamsed@gmail.com&password=123456789&status=2",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"register"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "Mohamed"
+								},
+								{
+									"key": "email",
+									"value": "mohamsed@gmail.com"
+								},
+								{
+									"key": "password",
+									"value": "123456789"
+								},
+								{
+									"key": "status",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "profile",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "5|ATyZGuNuPyJXsiTlBUcnKj3N1XJYd5I07JWJfbqJad08491a",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/profile",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"profile"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "5|ATyZGuNuPyJXsiTlBUcnKj3N1XJYd5I07JWJfbqJad08491a",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/updateProfile?name=Sayed",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"updateProfile"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "Sayed"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "logout",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "5|ATyZGuNuPyJXsiTlBUcnKj3N1XJYd5I07JWJfbqJad08491a",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/logout",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"logout"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Chefs",
+			"item": [
+				{
+					"name": "All_Chefs",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "6|uE1ZC012zb4Wic0k6oFtLoWKLYD7oiZU7bkIkYg75575f8bb",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/chefs",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"chefs"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create_New_chef",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "6|uE1ZC012zb4Wic0k6oFtLoWKLYD7oiZU7bkIkYg75575f8bb",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "apiChef",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "this is Add By Api",
+									"type": "text"
+								},
+								{
+									"key": "photo",
+									"type": "file",
+									"src": "/D:/cv/222.jpeg"
+								},
+								{
+									"key": "job",
+									"value": "jobs",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/chefs",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"chefs"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "ApiChef",
+									"disabled": true
+								},
+								{
+									"key": "description",
+									"value": "this is Create By Api",
+									"disabled": true
+								},
+								{
+									"key": "job",
+									"value": "New Chef",
+									"disabled": true
+								},
+								{
+									"key": "photo",
+									"value": null,
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "show_Chef",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "6|uE1ZC012zb4Wic0k6oFtLoWKLYD7oiZU7bkIkYg75575f8bb",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/chefs/1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"chefs",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update_chef",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "7|VxUhrVxZzhnHBXYCJo1osBbwfEqWEqFeqw5ScXrH7e9a3702",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "new Api",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "job",
+									"value": "cook",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "this is Api",
+									"type": "text"
+								},
+								{
+									"key": "photo",
+									"type": "file",
+									"src": "/D:/cv/Abdelrahman.png",
+									"disabled": true
+								},
+								{
+									"key": "_method",
+									"value": "PUT",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/chefs/1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"chefs",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete_chef",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "7|VxUhrVxZzhnHBXYCJo1osBbwfEqWEqFeqw5ScXrH7e9a3702",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/chefs/1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"chefs",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Notfictions",
+			"item": [
+				{
+					"name": "reade_by_id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "7|VxUhrVxZzhnHBXYCJo1osBbwfEqWEqFeqw5ScXrH7e9a3702",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/not/03660387-a47f-4631-8b0c-046deaf58864",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"not",
+								"03660387-a47f-4631-8b0c-046deaf58864"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete_All_Notifictins",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "8|J9haiVsUnKDByWhAzGCgSTRhNrFHa8hcRdObmpqK1ea1eae7",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/delete_all_notifiction",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"delete_all_notifiction"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Read_All_notifictins",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "8|J9haiVsUnKDByWhAzGCgSTRhNrFHa8hcRdObmpqK1ea1eae7",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/read_All",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"read_All"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "page_Home",
+			"item": [
+				{
+					"name": "all_page_home",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "8|J9haiVsUnKDByWhAzGCgSTRhNrFHa8hcRdObmpqK1ea1eae7",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/pageHome",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"pageHome"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create_pageHome",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "8|J9haiVsUnKDByWhAzGCgSTRhNrFHa8hcRdObmpqK1ea1eae7",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "title_head",
+									"value": "title_head",
+									"type": "text"
+								},
+								{
+									"key": "body_head",
+									"value": "body_head",
+									"type": "text"
+								},
+								{
+									"key": "body_footer",
+									"value": "body_footer",
+									"type": "text"
+								},
+								{
+									"key": "phone",
+									"value": "phone",
+									"type": "text"
+								},
+								{
+									"key": "hours_of_support",
+									"value": "hours_of_support",
+									"type": "text"
+								},
+								{
+									"key": "workers",
+									"value": "workers",
+									"type": "text"
+								},
+								{
+									"key": "address",
+									"value": "address",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "generalal700@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "opening_hours",
+									"value": "opening_hours",
+									"type": "text"
+								},
+								{
+									"key": "photo_head",
+									"type": "file",
+									"src": "/D:/cv/face.jpeg"
+								},
+								{
+									"key": "video_head",
+									"type": "file",
+									"src": "/E:/pactuer/Video/video (2160p).mp4"
+								},
+								{
+									"key": "video_footer",
+									"type": "file",
+									"src": "/E:/pactuer/Video/Pexels Videos 2795307.mp4"
+								},
+								{
+									"key": "_method",
+									"value": "post",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/pageHome",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"pageHome"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Admin",
+			"item": [
+				{
+					"name": "All_admins",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "9|gOen2zqsmrQtURqcmptSBwsHdiPhLTH8MRFaOBJt56112ab6",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/admin",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"admin"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get_admin",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "9|gOen2zqsmrQtURqcmptSBwsHdiPhLTH8MRFaOBJt56112ab6",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/admin/1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"admin",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create_admin",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "9|gOen2zqsmrQtURqcmptSBwsHdiPhLTH8MRFaOBJt56112ab6",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/admin/?name=Api&email=api@gmail.com&password=123456789&re-password=123456789&status=1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"admin",
+								""
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "Api"
+								},
+								{
+									"key": "email",
+									"value": "api@gmail.com"
+								},
+								{
+									"key": "password",
+									"value": "123456789"
+								},
+								{
+									"key": "re-password",
+									"value": "123456789"
+								},
+								{
+									"key": "status",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update_email",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "9|gOen2zqsmrQtURqcmptSBwsHdiPhLTH8MRFaOBJt56112ab6",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/admin/9?name=Api&_method=PUT",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"admin",
+								"9"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "Api"
+								},
+								{
+									"key": "_method",
+									"value": "PUT"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete_admin",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "9|gOen2zqsmrQtURqcmptSBwsHdiPhLTH8MRFaOBJt56112ab6",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/admin/9",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"admin",
+								"9"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "comments",
+			"item": [
+				{
+					"name": "All_comments",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "9|gOen2zqsmrQtURqcmptSBwsHdiPhLTH8MRFaOBJt56112ab6",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/comments",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"comments"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get_comment",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "9|gOen2zqsmrQtURqcmptSBwsHdiPhLTH8MRFaOBJt56112ab6",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/comments/27",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"comments",
+								"27"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "crate_comment",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "Api",
+									"type": "text"
+								},
+								{
+									"key": "comment",
+									"value": "new Comment",
+									"type": "text"
+								},
+								{
+									"key": "photo",
+									"type": "file",
+									"src": "/E:/pactuer/00000l12401-e-1_2_3.jpg"
+								},
+								{
+									"key": "_mehod",
+									"value": "POST",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/create_comment",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"create_comment"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "Abdelrahman",
+									"disabled": true
+								},
+								{
+									"key": "comment",
+									"value": "this is Api Comment",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete_comment",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "10|l9QUjZ6LJFaWX2R8G23sV99OLgB4sBAmOLr7m2wr957468d1",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/comments/39",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"comments",
+								"39"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "complaint",
+			"item": [
+				{
+					"name": "All_complaint",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "10|l9QUjZ6LJFaWX2R8G23sV99OLgB4sBAmOLr7m2wr957468d1",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/complaints",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"complaints"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "show_complaint",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "10|l9QUjZ6LJFaWX2R8G23sV99OLgB4sBAmOLr7m2wr957468d1",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/complaints/3",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"complaints",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "show_Archive",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "10|l9QUjZ6LJFaWX2R8G23sV99OLgB4sBAmOLr7m2wr957468d1",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/show_Archive/6",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"show_Archive",
+								"6"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "All_Archive",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "10|l9QUjZ6LJFaWX2R8G23sV99OLgB4sBAmOLr7m2wr957468d1",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/all_Archive",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"all_Archive"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add_complaint",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/create_complaint/?name=Ahmed&email=generalal700@gmail.com&complaint=this is New Complaint",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"create_complaint",
+								""
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "Ahmed"
+								},
+								{
+									"key": "email",
+									"value": "generalal700@gmail.com"
+								},
+								{
+									"key": "complaint",
+									"value": "this is New Complaint"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "go_Archive",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "10|l9QUjZ6LJFaWX2R8G23sV99OLgB4sBAmOLr7m2wr957468d1",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/complaints/1?value=1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"complaints",
+								"1"
+							],
+							"query": [
+								{
+									"key": "value",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "New Request",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "10|l9QUjZ6LJFaWX2R8G23sV99OLgB4sBAmOLr7m2wr957468d1",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/complaints/2?value=2",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"complaints",
+								"2"
+							],
+							"query": [
+								{
+									"key": "value",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "events",
+			"item": [
+				{
+					"name": "all_events",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "10|l9QUjZ6LJFaWX2R8G23sV99OLgB4sBAmOLr7m2wr957468d1",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/events",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"events"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "show_Events",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "10|l9QUjZ6LJFaWX2R8G23sV99OLgB4sBAmOLr7m2wr957468d1",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/events/50",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"events",
+								"50"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create_Events",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "10|l9QUjZ6LJFaWX2R8G23sV99OLgB4sBAmOLr7m2wr957468d1",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "title",
+									"value": "Api Events",
+									"type": "text"
+								},
+								{
+									"key": "price",
+									"value": "201",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "description",
+									"type": "text"
+								},
+								{
+									"key": "photo",
+									"type": "file",
+									"src": "/E:/pactuer/pexels-karolina-grabowska-4386467.jpg"
+								},
+								{
+									"key": "_method",
+									"value": "POST",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/events",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"events"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update_events",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "10|l9QUjZ6LJFaWX2R8G23sV99OLgB4sBAmOLr7m2wr957468d1",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "title",
+									"value": "update Api",
+									"type": "text"
+								},
+								{
+									"key": "price",
+									"value": "50",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "update description",
+									"type": "text"
+								},
+								{
+									"key": "photo",
+									"type": "file",
+									"src": "/E:/pactuer/21048110262.jpg"
+								},
+								{
+									"key": "_method",
+									"value": "PUT",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/events/1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"events",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "10|l9QUjZ6LJFaWX2R8G23sV99OLgB4sBAmOLr7m2wr957468d1",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/events/1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"events",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Gallery",
+			"item": [
+				{
+					"name": "All_galleries",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "10|l9QUjZ6LJFaWX2R8G23sV99OLgB4sBAmOLr7m2wr957468d1",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/galleries",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"galleries"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create_gallery",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "10|l9QUjZ6LJFaWX2R8G23sV99OLgB4sBAmOLr7m2wr957468d1",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "gallery",
+									"type": "file",
+									"src": "/E:/pactuer/21048110262.jpg"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/galleries",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"galleries"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "show",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "10|l9QUjZ6LJFaWX2R8G23sV99OLgB4sBAmOLr7m2wr957468d1",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/galleries/1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"galleries",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "10|l9QUjZ6LJFaWX2R8G23sV99OLgB4sBAmOLr7m2wr957468d1",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/galleries/1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"galleries",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "sections",
+			"item": [
+				{
+					"name": "New Request",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "10|l9QUjZ6LJFaWX2R8G23sV99OLgB4sBAmOLr7m2wr957468d1",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/sections",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"sections"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create_section",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "10|l9QUjZ6LJFaWX2R8G23sV99OLgB4sBAmOLr7m2wr957468d1",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/sections?name=Api Section 2",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"sections"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "Api Section 2"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "show_section",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "10|l9QUjZ6LJFaWX2R8G23sV99OLgB4sBAmOLr7m2wr957468d1",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/sections/1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"sections",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update_section",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "10|l9QUjZ6LJFaWX2R8G23sV99OLgB4sBAmOLr7m2wr957468d1",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "Api",
+									"type": "text"
+								},
+								{
+									"key": "_method",
+									"value": "PUT",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/sections/1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"sections",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete_section",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "10|l9QUjZ6LJFaWX2R8G23sV99OLgB4sBAmOLr7m2wr957468d1",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{url}}/sections/1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"sections",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "Meals",
+			"item": [
+				{
+					"name": "All_Meals",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "10|l9QUjZ6LJFaWX2R8G23sV99OLgB4sBAmOLr7m2wr957468d1",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/meals",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"meals"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create_meal",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "10|l9QUjZ6LJFaWX2R8G23sV99OLgB4sBAmOLr7m2wr957468d1",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "Api",
+									"type": "text"
+								},
+								{
+									"key": "price",
+									"value": "30",
+									"type": "text"
+								},
+								{
+									"key": "components",
+									"value": "components",
+									"type": "text"
+								},
+								{
+									"key": "section_id",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "photo",
+									"type": "file",
+									"src": "/E:/pactuer/00000g10411-e_2.jpg"
+								},
+								{
+									"key": "_method",
+									"value": "POST",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/meals",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"meals"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "show_meal",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "10|l9QUjZ6LJFaWX2R8G23sV99OLgB4sBAmOLr7m2wr957468d1",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/meals/1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"meals",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "section_update",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "10|l9QUjZ6LJFaWX2R8G23sV99OLgB4sBAmOLr7m2wr957468d1",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "update Api",
+									"type": "text"
+								},
+								{
+									"key": "price",
+									"value": "50",
+									"type": "text"
+								},
+								{
+									"key": "components",
+									"value": "components",
+									"type": "text"
+								},
+								{
+									"key": "section_id",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "photo",
+									"type": "file",
+									"src": "/E:/pactuer/00000l12401-e-1_2_3.jpg"
+								},
+								{
+									"key": "_method",
+									"value": "PUT",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/meals/1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"meals",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete_Meal",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "10|l9QUjZ6LJFaWX2R8G23sV99OLgB4sBAmOLr7m2wr957468d1",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/meals/1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"meals",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "orders",
+			"item": [
+				{
+					"name": "all_orders",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "10|l9QUjZ6LJFaWX2R8G23sV99OLgB4sBAmOLr7m2wr957468d1",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/orders",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"orders"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "all_archive",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "10|l9QUjZ6LJFaWX2R8G23sV99OLgB4sBAmOLr7m2wr957468d1",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/all_archive",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"all_archive"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "New Request",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/create_request?name=name&email=generalal700@gmail.com&phone=01013230248&date=22-5-2023&time=5:3:AM&number_people=20&message=message",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"create_request"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "name"
+								},
+								{
+									"key": "email",
+									"value": "generalal700@gmail.com"
+								},
+								{
+									"key": "phone",
+									"value": "01013230248"
+								},
+								{
+									"key": "date",
+									"value": "22-5-2023"
+								},
+								{
+									"key": "time",
+									"value": "5:3:AM"
+								},
+								{
+									"key": "number_people",
+									"value": "20"
+								},
+								{
+									"key": "message",
+									"value": "message"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Restore_Archive",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "10|l9QUjZ6LJFaWX2R8G23sV99OLgB4sBAmOLr7m2wr957468d1",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/Restore_Archive/58",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"Restore_Archive",
+								"58"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "go_Archive",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "10|l9QUjZ6LJFaWX2R8G23sV99OLgB4sBAmOLr7m2wr957468d1",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/orders/57?value=1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"orders",
+								"57"
+							],
+							"query": [
+								{
+									"key": "value",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "10|l9QUjZ6LJFaWX2R8G23sV99OLgB4sBAmOLr7m2wr957468d1",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/orders/57?value=2",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"orders",
+								"57"
+							],
+							"query": [
+								{
+									"key": "value",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "show",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "10|l9QUjZ6LJFaWX2R8G23sV99OLgB4sBAmOLr7m2wr957468d1",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/orders/59",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"orders",
+								"59"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "show_Archive",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "10|l9QUjZ6LJFaWX2R8G23sV99OLgB4sBAmOLr7m2wr957468d1",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/show_Archive/58",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"show_Archive",
+								"58"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "url",
+			"value": "http://127.0.0.1:8000/api",
+			"type": "string"
+		}
+	]
+}

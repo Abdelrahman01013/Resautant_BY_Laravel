@@ -1,0 +1,9 @@
+
+http://127.0.0.1:8000/admin
+
+---------
+email:  genralal700@gmail.com
+
+password:123456789
+
+-------- :)
